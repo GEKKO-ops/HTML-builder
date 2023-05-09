@@ -80,7 +80,7 @@ async function bundleStyles() {
 async function buildProject() {
   try {
     // создание папки для сборки
-    await fs.mkdir(buildFolder, { recursive: true });
+    await fs.mkdir(path.join(__dirname, buildFolder), { recursive: true });
 
     // копирование директории assets
     await copyDir(assetsPath, assetsBuilderPath);
